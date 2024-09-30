@@ -14,6 +14,11 @@ const bgGradient = ({
   startColor,
   endColor,
   direction = "to bottom",
+}: {
+  color?: string;
+  startColor: string;
+  endColor: string;
+  direction?: string;
 }) => ({
   background: `linear-gradient(${direction}, ${startColor}, ${endColor}), ${color}`,
 });

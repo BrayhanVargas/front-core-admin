@@ -1,50 +1,72 @@
-# React + TypeScript + Vite
+# Front Core Admin
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is the frontend application for Core Entities Admin.
+Built with **React**, **TypeScript**, and **Vite**. The application allows users to manage entities and employees and connects with the backend API for CRUD operations and authentication.
 
-Currently, two official plugins are available:
+## Requirements and Configuration
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Ensure the following tools are installed on your system:
+- [Node.js](https://nodejs.org/) (version 18 or later)
+- [npm](https://www.npmjs.com/)
 
-## Expanding the ESLint configuration
+## Installation and Execution
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+1. Clone the repository: `git clone <repository-url>`
+2. Navigate to the project folder: `cd front-core-admin`
+3. Install dependencies: `npm install`
+4. Run the development server: `npm run dev`
+5. To build for production: `npm run build`
 
-- Configure the top-level `parserOptions` property like this:
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+## App flow
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+Login Page
+![Screenshot 2024-09-30 at 9 13 30 AM](https://github.com/user-attachments/assets/eaa7df8f-9e26-442e-a85d-441c9f94d72e)
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+Home Page
+![Screenshot 2024-09-30 at 9 16 18 AM](https://github.com/user-attachments/assets/f5961d4a-7b7b-4899-a1a4-67998e927152)
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+Create Entity Modal
+![Screenshot 2024-09-30 at 9 16 50 AM](https://github.com/user-attachments/assets/62346f8b-358d-4c2b-9288-26eb7e05615e)
+
+## Folder Structure
+
+The folder structure of the project follows a modular approach to keep the code maintainable and scalable.
+
+Using split layers, services to handle http requests, hooks to handling component life cicle data and pages to show the view.
+
+front-core-admin/
+├── src/                 # Source code of the application
+│   ├── assets/          # Static assets like images, fonts, etc.
+│   ├── layouts/         # Layout components (e.g., MainLayout, Nav)
+│   ├── modules/         # Modularized features
+│   │   ├── auth/        # Authentication module
+│   │   │   ├── hooks/
+│   │   │   ├── pages/
+│   │   │   └── services/
+│   │   ├── home/        # Home module for entity management
+│   │   │   ├── components/
+│   │   │   ├── hooks/
+│   │   │   ├── page/
+│   │   │   └── services/
+│   ├── theme/           # Custom MUI theme and configurations
+│   ├── App.css          # Global CSS styles
+│   ├── App.tsx          # Main app component
+│   ├── index.css        # Global CSS
+│   ├── main.tsx         # Entry point of the React application
+
+## Environment Variables
+
+To run this project, you will need to configure the following environment variable in a .env file at the root level:
+
+VITE_API_URL: The base URL of the backend API.
+
+## Libraries and Tools
+
+
+React: Frontend library for building user interfaces.
+React Router: Handles the routing of the application.
+React Hook Form: Form management library used for handling form state and validation.
+Material UI (MUI): UI component library for building modern web applications.
+Yup: Schema validation library used with React Hook Form.
+Axios: For making HTTP requests to the backend API.

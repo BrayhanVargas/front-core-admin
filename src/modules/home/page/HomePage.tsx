@@ -106,10 +106,6 @@ export const HomePage = () => {
 
         {loading ? (
           <Typography variant="h6">Loading entities...</Typography>
-        ) : error ? (
-          <Typography variant="h6" color="error">
-            {error}
-          </Typography>
         ) : (
           <>
             <TableContainer component={Paper}>

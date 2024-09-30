@@ -106,11 +106,6 @@ export const LoginPage = () => {
         >
           {loading ? "Logging in..." : "Login"}
         </Button>
-        {error && (
-          <Typography variant="body2" color="error" sx={{ mt: 2 }}>
-            {error}
-          </Typography>
-        )}
       </Box>
     </Box>
   );

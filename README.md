@@ -35,6 +35,8 @@ The folder structure of the project follows a modular approach to keep the code 
 
 Using split layers, services to handle http requests, hooks to handling component life cicle data and pages to show the view.
 
+```bash
+
 front-core-admin/
 ├── src/                 # Source code of the application
 │   ├── assets/          # Static assets like images, fonts, etc.
@@ -54,6 +56,7 @@ front-core-admin/
 │   ├── App.tsx          # Main app component
 │   ├── index.css        # Global CSS
 │   ├── main.tsx         # Entry point of the React application
+```
 
 ## Environment Variables
 

@@ -29,7 +29,8 @@ export const LoginPage = () => {
   const [password, setPassword] = useState("");
   const theme = useTheme();
 
-  const handleLogin = () => {
+  const handleLogin = (e?: React.FormEvent) => {
+    e?.preventDefault(); // Previene el refresco de la página
     if (!email || !password) return;
     login(email, password);
   };
@@ -64,6 +65,7 @@ export const LoginPage = () => {
 
       <Box
         component="form"
+        onSubmit={handleLogin}
         sx={{
           width: 300,
           padding: 4,
@@ -103,6 +105,7 @@ export const LoginPage = () => {
           onClick={handleLogin}
           disabled={loading}
           sx={{ width: "100%" }}
+          type="submit"
         >
           {loading ? "Logging in..." : "Login"}
         </Button>

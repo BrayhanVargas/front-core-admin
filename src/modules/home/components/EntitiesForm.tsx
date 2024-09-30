@@ -27,7 +27,7 @@ interface EmployeeFormData {
   lastName: string;
   position?: string;
   email: string;
-  phone?: string; 
+  phone?: string;
 }
 
 const validationSchema = Yup.object().shape({
@@ -45,7 +45,7 @@ const validationSchema = Yup.object().shape({
     .required("Email is required"),
   phone: Yup.string()
     .matches(/^\d{10}$/, "Phone number must be 10 digits")
-    .optional(), 
+    .optional(),
   employees: Yup.array()
     .of(
       Yup.object().shape({

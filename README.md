@@ -36,7 +36,6 @@ The folder structure of the project follows a modular approach to keep the code 
 Using split layers, services to handle http requests, hooks to handling component life cicle data and pages to show the view.
 
 ```bash
-
 front-core-admin/
 ├── src/                 # Source code of the application
 │   ├── assets/          # Static assets like images, fonts, etc.
@@ -66,10 +65,12 @@ VITE_API_URL: The base URL of the backend API.
 
 ## Libraries and Tools
 
-
+```bash
 React: Frontend library for building user interfaces.
 React Router: Handles the routing of the application.
 React Hook Form: Form management library used for handling form state and validation.
 Material UI (MUI): UI component library for building modern web applications.
 Yup: Schema validation library used with React Hook Form.
 Axios: For making HTTP requests to the backend API.
+```
+

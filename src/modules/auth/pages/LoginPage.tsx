@@ -24,7 +24,7 @@ const bgGradient = ({
 });
 
 export const LoginPage = () => {
-  const { login, loading, error } = useAuth();
+  const { login, loading } = useAuth();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const theme = useTheme();

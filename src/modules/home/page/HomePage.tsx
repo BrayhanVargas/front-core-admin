@@ -21,14 +21,8 @@ import { useEntity } from "../hooks/useEntity";
 import { EntityFormData } from "../components/EntitiesForm";
 
 export const HomePage = () => {
-  const {
-    entities,
-    loading,
-    error,
-    removeEntity,
-    fetchAllEntities,
-    createNewEntity,
-  } = useEntity();
+  const { entities, loading, removeEntity, fetchAllEntities, createNewEntity } =
+    useEntity();
   const [open, setOpen] = useState(false);
   const [deleteDialogOpen, setDeleteDialogOpen] = useState(false);
   const [selectedItemId, setSelectedItemId] = useState<number | null>(null);
